@@ -54,8 +54,8 @@ const setupTextHover = (container, type) => {
   container.addEventListener('mouseleave', handleMouseLeave);
 
   return () => {
-    container.addEventListener('mousemove', handleMouseMove);
-    container.addEventListener('mouseleave', handleMouseLeave);
+    container.removeEventListener('mousemove', handleMouseMove);
+    container.removeEventListener('mouseleave', handleMouseLeave);
   };
 };
 
